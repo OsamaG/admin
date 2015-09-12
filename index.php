@@ -2,7 +2,7 @@
     include('xcrud/xcrud.php');
     $xcrud = Xcrud::get_instance();
     $xcrud->table('users');
-    $xcrud->table_name('My custom table!');
+    $xcrud->table_name('المتسابقين');
     $xcrud->label('user_name', 'الاسم');
     $xcrud->label('user_email', 'الايميل');
     $xcrud->label('user_phone', 'التليفون');
@@ -14,7 +14,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>HTML5 Layout</title>
+        <title>نتائج المتسابقين</title>
         <style type="text/css">
             header, section, footer, aside, nav, article, figure, figcaption {
                 display: block;}
@@ -100,7 +100,7 @@
                 <?php echo $xcrud->render('المستخدمين');  ?>
             </section>
             <footer>
-                &copy; 2011 Yoko's Kitchen
+                &copy; <?php echo date('Y'); ?> Intel KSA
             </footer>
         </div><!-- .wrapper -->
     </body>
