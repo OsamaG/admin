@@ -2,12 +2,13 @@
     include('xcrud/xcrud.php');
     $xcrud = Xcrud::get_instance();
     $xcrud->table('users');
-    $xcrud->order_by(array('user_score' => 'desc', 'user_time' => 'asc'));
+    $xcrud->order_by('user_score', 'desc');
+
     $xcrud->table_name('المتسابقين');
     $xcrud->label('user_name', 'الاسم');
     $xcrud->label('user_email', 'الايميل');
     $xcrud->label('user_phone', 'التليفون');
-    $xcrud->label('user_score', 'النقاط');
+    // $xcrud->label('user_score', 'النقاط');
     $xcrud->label('user_time', 'الوقت');
 
 ?>
